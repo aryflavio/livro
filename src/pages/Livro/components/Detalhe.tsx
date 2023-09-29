@@ -8,37 +8,42 @@ import acotarlivro from "../../../../assets/acotarlivro.png";
 
 const widht = Dimensions.get('screen').width;
 
-export default function Detalhe() {
+type Props = {
+  titulolivro: string,
+  nomeBibliotca: string,
+  descricao: string,
+  nomeLivros: string,
+  descricaolivro: string,
+  preco: string
+        
+}
+
+export default function Detalhe({titulolivro, nomeBibliotca, descricao, nomeLivros, descricaolivro, preco} : Props) {
     return <>
 
-<Text style={estilos.titulolivro}>Os Livros Mais Acessados</Text>
+<Text style={estilos.titulolivro}>{titulolivro}</Text>
 
         <View style={estilos.biblioteca}>
           <Image style={estilos.imgBiblioteca} source={logo}></Image>
-          <Text style={estilos.nomeBiblioteca}> Biblioteca</Text>
+          <Text style={estilos.nomeBiblioteca}>{nomeBibliotca}</Text>
         </View>
 
         <Text style={estilos.descricao}>
           {" "}
-          Bem-vindo à nossa loja de bibliotecas online, um paraíso literário
-          onde o conhecimento e a imaginação se encontram em perfeita harmonia.
-          Navegar por nossos corredores virtuais é como passear por uma coleção
-          interminável de tesouros literários, todos ao alcance de seus dedos. {'\n'}
+          {descricao} {'\n'}
         </Text>
 
         <View style={estilos.biblioteca}>
           <Image style={estilos.imgLivros} source={boxharry}></Image>
-          <Text style={estilos.nomeLivros}> Box Harry Potter</Text>
+          <Text style={estilos.nomeLivros}> {nomeLivros}</Text>
         </View>
 
         <Text style={estilos.descricaolivro}>
           {" "}
-          Box Harry Potter – Série Completa: perfeito para todos que cresceram
-          acompanhando a saga do jovem bruxo e para as novas gerações de fãs que
-          anseiam por conhecê-la!
+          {descricaolivro}
         </Text>
 
-        <Text style={estilos.preco}>R$ 120,00 {'\n'}</Text>
+        <Text style={estilos.preco}>{preco} {'\n'}</Text>
 
 
         <View style={estilos.biblioteca}>

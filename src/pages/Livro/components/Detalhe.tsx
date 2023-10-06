@@ -14,11 +14,17 @@ type Props = {
   descricao: string,
   nomeLivros: string,
   descricaolivro: string,
-  preco: string
+  preco: string,
+  nomeLivros2: string,
+  descricaolivro2: string,
+  preco2: string,
+  nomeLivros3: string,
+  descricaolivro3: string,
+  preco3: string
         
 }
 
-export default function Detalhe({titulolivro, nomeBibliotca, descricao, nomeLivros, descricaolivro, preco} : Props) {
+export default function Detalhe({titulolivro, nomeBibliotca, descricao, nomeLivros, descricaolivro, preco, nomeLivros2, descricaolivro2, preco2, nomeLivros3, descricaolivro3, preco3} : Props) {
     return <>
 
 <Text style={estilos.titulolivro}>{titulolivro}</Text>
@@ -48,33 +54,26 @@ export default function Detalhe({titulolivro, nomeBibliotca, descricao, nomeLivr
 
         <View style={estilos.biblioteca}>
           <Image style={estilos.imgLivros} source={hdalivro}></Image>
-          <Text style={estilos.nomeLivros}> Hipótese do Amor</Text>
+          <Text style={estilos.nomeLivros}>{nomeLivros2}</Text>
         </View>
 
         <Text style={estilos.descricaolivro}>
           {" "}
-          Olive Smith é uma estudante de doutoramento em Biologia e não acredita
-          em namoros de longa data. Após terminar seu relacionamento com Jeremy,
-          percebe que sua amiga, Anh, gosta dele e decide fazer o possível para
-          uni-los.
+          {descricaolivro2}
         </Text>
 
-        <Text style={estilos.preco}>R$ 69,90 {'\n'}</Text>
+        <Text style={estilos.preco}>{preco2}{'\n'}</Text>
 
         <View style={estilos.biblioteca}>
           <Image style={estilos.imgLivros} source={acotarlivro}></Image>
-          <Text style={estilos.nomeLivros}> Box Acotar</Text>
+          <Text style={estilos.nomeLivros}> {nomeLivros3}</Text>
         </View>
 
         <Text style={estilos.descricaolivro}>
-          O livro Corte de Espinhos e Rosas (Acotar) traz uma envolvente
-          história fictícia entre duas espécies, humanos e seres místicos
-          chamados feéricos. Há muitos anos na história, uma guerra entre ambas
-          as espécies foi declarada e por fim, os humanos conseguiram se
-          libertar.
+        {descricaolivro3}
         </Text>
 
-        <Text style={estilos.preco}>R$ 132,00</Text>
+        <Text style={estilos.preco}> {preco3}</Text>
         </>
 }
 

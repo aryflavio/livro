@@ -20,6 +20,17 @@ export default function Livro() {
         nomeLivros = {livro.detalhes.nomeLivros}
         descricaolivro = {livro.detalhes.descricaolivro}
         preco = {livro.detalhes.preco}
+
+        nomeLivros2 = {livro.detalhes.nomeLivros2}
+        descricaolivro2 = {livro.detalhes.descricaolivro2}
+        preco2 = {livro.detalhes.preco2}
+
+        nomeLivros3 = {livro.detalhes.nomeLivros3}
+        descricaolivro3 = {livro.detalhes.descricaolivro3}
+        preco3 = {livro.detalhes.preco3}
+
+
+        
         />
       </View>
 
